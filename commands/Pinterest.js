@@ -5,6 +5,7 @@ module.exports = {
     desc: "Download media from Pinterest",
     react: "📌",
     category: "download",
+    use: ".pinterest [url or name]",
     filename: __filename,
 
     execute: async (conn, mek, m, { from, args, q, reply }) => {
