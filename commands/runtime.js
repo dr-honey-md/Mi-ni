@@ -27,12 +27,21 @@ function getRuntimeCommand() {
 
 ⏱️ Uptime: ${uptime.days}d ${uptime.hours}h ${uptime.minutes}m ${uptime.seconds}s
 🚀 Started: ${new Date(startTime).toLocaleString()}
-📊 Total: ${uptime.totalMs} milliseconds`;
+📊 Total: ${uptime.totalMs} milliseconds
+
+> *ᴡʜᴀᴛꜱᴀᴩᴩ ᴍɪɴɪ ʙᴏᴛ | ᴅʀ ʜᴏɴᴇʏ ᴍɪɴɪ*
+> *© ᴩᴏᴡᴇʀᴇᴅ ʙʏ : ᴅʀ ʜᴏɴᴇʏ ᴛᴇᴄʜx*`;
 
         // React first
         await conn.sendMessage(from, {
           react: { text: "🕐", key: message.key }
         });
+
+        // Send banner image
+        await conn.sendMessage(from, {
+          image: { url: "https://up6.cc/2026/06/17818425609981.jpg" },
+          caption: ""
+        }, { quoted: message });
 
         // Check if it's a newsletter context
         const isNewsletter = from.endsWith('@newsletter');
@@ -65,7 +74,6 @@ function getRuntimeCommand() {
                 title: "DR-HONEY-MINI RUNTIME",
                 body: "DR-HONEY-MINI RUNTIME",
                 thumbnailUrl: "https://up6.cc/2026/06/17818425609981.jpg",
-                sourceUrl: "https://github.com/LEGENDMANII05/MANII-05-MINI.git",
                 mediaType: 1,
                 renderLargerThumbnail: true
               }
@@ -110,7 +118,6 @@ function getRuntimeCommand() {
                 title: "❌ Error",
                 body: "Failed to fetch runtime information",
                 thumbnailUrl: "https://up6.cc/2026/06/17818425609981.jpg",
-                sourceUrl: "https://github.com/LEGENDMANII05/MANII-05-MINI.git",
                 mediaType: 1,
                 renderLargerThumbnail: true
               }
